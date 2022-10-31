@@ -5,11 +5,12 @@ let interval;
 
 startBtn.addEventListener('click', () => {
   startBtn.setAttribute('disabled', true);
+  stopBtn.removeAttribute("disabled")
   interval = setInterval(changeBodyColor, 1000);
 });
 stopBtn.addEventListener('click', () => {
-  startBtn.removeAttribute('disabled');
   stopBtn.setAttribute('disabled', true);
+  startBtn.removeAttribute('disabled');
   clearInterval(interval);
 });
 
